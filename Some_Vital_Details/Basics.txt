@@ -1,0 +1,18 @@
+
+*** IF a program is syntactically correct, this does by no means imply that is also semantically correct !!!.
+
+
+-> Legal variable names :  $178
+                           Hello$World
+                           X
+                           $
+                           Name
+
+->Those names are illegal: 5ABC
+                           _
+
+                           !hello!
+                           
+                           x'
+
+                          -123

@@ -3,7 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/All_About_Threads.iml" filepath="$PROJECT_DIR$/.idea/All_About_Threads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Book_Shop/Book_Shop.iml" filepath="$PROJECT_DIR$/Book_Shop/Book_Shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Business_Associates/Business_Associates.iml" filepath="$PROJECT_DIR$/Business_Associates/Business_Associates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dining_Penguins/Dining_Penguins.iml" filepath="$PROJECT_DIR$/Dining_Penguins/Dining_Penguins.iml" />
       <module fileurl="file://$PROJECT_DIR$/Future/Future.iml" filepath="$PROJECT_DIR$/Future/Future.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LearninThreads/LearninThreads.iml" filepath="$PROJECT_DIR$/LearninThreads/LearninThreads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Thread_Pool/Thread_Pool.iml" filepath="$PROJECT_DIR$/Thread_Pool/Thread_Pool.iml" />
       <module fileurl="file://$PROJECT_DIR$/Trying_Things/Trying_Things.iml" filepath="$PROJECT_DIR$/Trying_Things/Trying_Things.iml" />
     </modules>
   </component>

@@ -1,15 +1,13 @@
-
 public class Doit {
-    static public class A{
+    static class A{
          public void h(){
             System.out.println("A.h()");
         }
        public void G(){
             System.out.println("A.G()");
         }
-
     }
-    static public class B extends A{
+    static class B extends A{
         public void h(){
             System.out.println("B.h()");
         }
@@ -18,13 +16,11 @@ public class Doit {
             System.out.println("B.f()");
         }
 
-        static public void E(){
+       static void E(){
             System.out.println("B.E()");
         }
-
     }
-
-    static public class C extends B{
+    static class C extends B{
         public void h(){
             System.out.println("C.h()");
         }
@@ -32,7 +28,7 @@ public class Doit {
             System.out.println("C.G()");
         }
 
-        static public void E(){
+        static void E(){
             System.out.println("C.E()");
         }
 
@@ -56,7 +52,6 @@ public class Doit {
           C c = new C();
 
           a.G(); // "C.G()" ->Dynamic dispatch.
-
+          b.E(); // "B.E()" -> static, no dispatch.
 }
 }
-

@@ -55,3 +55,56 @@ public class Doit {
           b.E(); // "B.E()" -> static, no dispatch.
 }
 }
+
+
+
+
+
+====================================================================================================
+
+public class Doit {
+
+    static class A{
+         public void h(){
+            System.out.println("A.h()");
+        }
+       public void G(){
+            System.out.println("A.G()");
+        }
+    }
+    static class B extends A{
+        public void h(){
+            System.out.println("B.h()");
+        }
+
+        public void f(){
+            System.out.println("B.f()");
+        }
+
+       static void E(){
+            System.out.println("B.E()");
+        }
+    }
+    static class C <T extends B>{    // ანუ ეს ნიშნავს, რომ C და B ტიპის ობიექტების გარდა ამ კლასში ვერავინ შევა. რადგანრ Upper bound B აქვს.
+        public void h(){
+            System.out.println("C.h()");
+        }
+        public void G(){
+            System.out.println("C.G()");
+        }
+
+        static void E(){
+            System.out.println("C.E()");
+        }
+
+    }
+    
+    public static void main(String[] arr){
+      //  Work<String> work = new SomeWork<>(arr[0], );
+
+
+
+        C<A> c = new C<>(); //compiler erorr.
+
+}
+}

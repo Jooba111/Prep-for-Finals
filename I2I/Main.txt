@@ -1,0 +1,62 @@
+
+public class Doit {
+    static public class A{
+         public void h(){
+            System.out.println("A.h()");
+        }
+       public void G(){
+            System.out.println("A.G()");
+        }
+
+    }
+    static public class B extends A{
+        public void h(){
+            System.out.println("B.h()");
+        }
+
+        public void f(){
+            System.out.println("B.f()");
+        }
+
+        static public void E(){
+            System.out.println("B.E()");
+        }
+
+    }
+
+    static public class C extends B{
+        public void h(){
+            System.out.println("C.h()");
+        }
+        public void G(){
+            System.out.println("C.G()");
+        }
+
+        static public void E(){
+            System.out.println("C.E()");
+        }
+
+    }
+
+    public static void main(String[] arr){
+      //  Work<String> work = new SomeWork<>(arr[0], );
+
+
+        //ანუ რომ ვქმნით ობჯექთს
+        //ჩვენ შეგვიძია რომ შევქმნათ ობჯექთი და შექმნის დროს რეფერენსად მივცეთ მისი საბკლასი.
+        // მაგრამ როდესაც რაიმე მეთოდის გამოძახება დაგვჭირდება თუ სტატიკურ ტაიფად მქონე კლასში არ იქნებ
+        //იმ მეთოდს ვერ გამოვიძახებთ
+        //მაგრამ თუ სტატიკური თაიფშიდაც არის ეს მეთოდი და რეფერენსად მქონე საბ კლასშიც არს და ეს მეთოდი static type არ არის მაშინ
+        //მოხდება dynamic dispatch და პროგრამა წავა რეფერენსად რომელი კლასიც ჰქონდა იმის მეთოდში.
+        //თუმცა თუ მეთოდი სტატიკია (თან სტატ მეთოდის ოვერაიდი არ შეიძლება)  როცა გამოვიძახებთ რაიმე ობჯექთზე ფუნქციას პირდაპირ სტატიკური თაიფად რომელი კლასიც ჰქონდა იყ წავა
+
+   //სტატიკ ტაიფი     დაინამიკ თაიფი
+          A a = new C();
+          B b = new C();
+          C c = new C();
+
+          a.G(); // "C.G()" ->Dynamic dispatch.
+
+}
+}
+
